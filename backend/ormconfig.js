@@ -5,10 +5,10 @@ module.exports = {
   username: `${process.env.POSTGRES_USER}`,
   password: `${process.env.POSTGRES_PASSWORD}`,
   database: `${process.env.POSTGRES_DB}`,
-  migrations: ['./src/shared/infra/typeorm/migrations/**.ts'],
-  entities: ['./src/modules/**/entities/**.ts'],
+  entities: ['./src/models/*.ts'],
+  migrations: ['./src/database/migrations/*.ts'],
   cli: {
-    migrationsDir: './src/shared/infra/typeorm/migrations',
+    migrationsDir: './src/database/migrations',
   },
   logging: ['error'],
 };
